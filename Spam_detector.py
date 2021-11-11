@@ -17,7 +17,7 @@ def spam_detector(df):
 
     # Loading data and splitting the data
     df = pd.read_csv(df)
-    train_data, test_data, train_target, test_target = train_test_split(df['text'], df['label_num'], test_size=0.8)
+    train_data, test_data, train_target, test_target = train_test_split(df['text'], df['label_num'], test_size=0.25)
 
     # Vectorizer
     tfidf = TfidfVectorizer(ngram_range=(1, 2), min_df=2)
